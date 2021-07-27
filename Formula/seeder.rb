@@ -8,6 +8,8 @@ class Seeder < Formula
   version "0.2.8"
   license "Apache-2.0"
   bottle :unneeded
+  depends_on "git"
+  depends_on "go"
 
   on_macos do
     if Hardware::CPU.intel?
@@ -30,9 +32,6 @@ class Seeder < Formula
       sha256 "f2c7e1c56e3cae9e5e6bc6afda270b09e425b5b293d7435abc3f23604bfe01be"
     end
   end
-
-  depends_on "git"
-  depends_on "go"
 
   def install
     bin.install "seeder"
