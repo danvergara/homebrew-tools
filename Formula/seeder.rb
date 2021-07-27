@@ -5,29 +5,29 @@
 class Seeder < Formula
   desc "Database seeds. CLI and Golang library."
   homepage "https://github.com/danvergaran/seeder"
-  version "0.2.5"
+  version "0.2.6"
   license "Apache-2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danvergara/seeder/releases/download/v0.2.5/seeder_0.2.5_Darwin_x86_64.tar.gz"
-      sha256 "db9d6f301bafa7ae00e838e743367ee9838496b5955e0cc1b3ba581f3feb54a3"
+      url "https://github.com/danvergara/seeder/releases/download/v0.2.6/seeder_0.2.6_Darwin_x86_64.tar.gz"
+      sha256 "f7dbe0d76a0f29fabd70ab1e57b154f051ae908eb7bfbe2597eef087bf5f80c3"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danvergara/seeder/releases/download/v0.2.5/seeder_0.2.5_Darwin_arm64.tar.gz"
-      sha256 "be6e48a26b3c6e583e89ab2342ab0c1a07b9a5afe94b9524b9ab44554933bdba"
+      url "https://github.com/danvergara/seeder/releases/download/v0.2.6/seeder_0.2.6_Darwin_arm64.tar.gz"
+      sha256 "44074aa739c274335933a10cc77d379da399fface7ba6ac4ab3e8d7b56d70228"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/danvergara/seeder/releases/download/v0.2.5/seeder_0.2.5_Linux_x86_64.tar.gz"
-      sha256 "cc27f0d9d52c2805609b34d2dd4554b370a260027792f9ced0b7ce53f67e5eaf"
+      url "https://github.com/danvergara/seeder/releases/download/v0.2.6/seeder_0.2.6_Linux_x86_64.tar.gz"
+      sha256 "97a0c031dc4a2389e552ecce0bb9f62a7de4a7b7a915bf64f964fc2fa9882415"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danvergara/seeder/releases/download/v0.2.5/seeder_0.2.5_Linux_arm64.tar.gz"
-      sha256 "468c58f3ceafa7babc276a67034681e8b2c36babdce8021fdafa9b9592e87c37"
+      url "https://github.com/danvergara/seeder/releases/download/v0.2.6/seeder_0.2.6_Linux_arm64.tar.gz"
+      sha256 "bb9b285ec9e538731c8eae64a76267bcabce814d96c1527063d3d64f127e169e"
     end
   end
 
