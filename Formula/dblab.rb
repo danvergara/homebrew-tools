@@ -12,22 +12,22 @@ class Dblab < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danvergara/dblab/releases/download/v0.10.1/dblab_0.10.1_darwin_amd64.tar.gz"
-      sha256 "67c6ad1d3052c7c8d93712eea58dc51b6d6ceb962f65f6935c61c3dfbb73e10b"
+      sha256 "dd3a5f651bfc983dc01ff7dae0808574e1c82dbf0f4493f075306797d581bdb7"
     end
     if Hardware::CPU.arm?
       url "https://github.com/danvergara/dblab/releases/download/v0.10.1/dblab_0.10.1_darwin_arm64.tar.gz"
-      sha256 "d96aea979cdb0845621d802cc1bfadda92aa4c5cc12aa03cab56b64ae2194ed9"
+      sha256 "7a9baf4a7b6cb7103689137c2aff231ccb7340c60d8c89cf25ae07c3d29300c8"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/danvergara/dblab/releases/download/v0.10.1/dblab_0.10.1_linux_amd64.tar.gz"
-      sha256 "028e7e2d003e516ea1f56388092eb04db3ea50eeaef8c623c065e52fb0d1868c"
+      sha256 "30fe517accc77d64718422337499f71371fb65b5c6b12cb268fcce4177985b3e"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/danvergara/dblab/releases/download/v0.10.1/dblab_0.10.1_linux_arm64.tar.gz"
-      sha256 "d519aeca461d2436172da0fcdf901c02a05f0f1455101949dd8bb8162f1826e2"
+      sha256 "b792678b075f7078055aafe5f675e43810afedc939d9e080036c0fa9332eb521"
     end
   end
 
