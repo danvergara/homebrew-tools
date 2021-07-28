@@ -12,22 +12,22 @@ class Seeder < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danvergara/seeder/releases/download/v0.2.9/seeder_0.2.9_darwin_amd64.tar.gz"
-      sha256 "b780f65fbc0af088f92cd32821d004fe2e7f4cee610a6a0ba9393e724091928f"
+      sha256 "398c026a00bbc7308ae1d505f706b776bb12c70cc4fd5cb7bd622b8619649f28"
     end
     if Hardware::CPU.arm?
       url "https://github.com/danvergara/seeder/releases/download/v0.2.9/seeder_0.2.9_darwin_arm64.tar.gz"
-      sha256 "9a61f67734a03cb8ddf96ee9bb055925caf6816178e901fbdf269ea7e38db231"
+      sha256 "28cbea9ee9df64b5896c5af5759c805fa6bb571a1d2393b6fb96ca79c8a04083"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/danvergara/seeder/releases/download/v0.2.9/seeder_0.2.9_linux_amd64.tar.gz"
-      sha256 "9249567d94527cb0b504c43f11846cedbe20ef29c93f1ce1f892fbacc413939b"
+      sha256 "9f841695bf842480bef0086721f53cc0227af5e54f3c30ac67f0440279d9bbf8"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/danvergara/seeder/releases/download/v0.2.9/seeder_0.2.9_linux_arm64.tar.gz"
-      sha256 "f945152b8b5f26d18b2a5abf102b96663deaaa41fafe58e0dde351c832c88506"
+      sha256 "25e00eaecba46ab67488293c01958b9c09f00c5c69e9770735eabd17dbf080a5"
     end
   end
 
