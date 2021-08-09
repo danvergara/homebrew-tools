@@ -5,29 +5,29 @@
 class Dblab < Formula
   desc "Interactive client for PostgreSQL and MySQL"
   homepage "https://github.com/danvergara/dblab"
-  version "0.10.1"
+  version "0.11.0"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danvergara/dblab/releases/download/v0.10.1/dblab_0.10.1_darwin_amd64.tar.gz"
-      sha256 "dd3a5f651bfc983dc01ff7dae0808574e1c82dbf0f4493f075306797d581bdb7"
+      url "https://github.com/danvergara/dblab/releases/download/v0.11.0/dblab_0.11.0_darwin_amd64.tar.gz"
+      sha256 "93b4286db30753919bc00207e7588bd668c3731fe97cd7bf479fad973a62d3e9"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danvergara/dblab/releases/download/v0.10.1/dblab_0.10.1_darwin_arm64.tar.gz"
-      sha256 "7a9baf4a7b6cb7103689137c2aff231ccb7340c60d8c89cf25ae07c3d29300c8"
+      url "https://github.com/danvergara/dblab/releases/download/v0.11.0/dblab_0.11.0_darwin_arm64.tar.gz"
+      sha256 "9b88a63bb087bdfb8ae7b1ba69dac227623f643a4f12757605b996ce55d073f2"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/danvergara/dblab/releases/download/v0.10.1/dblab_0.10.1_linux_amd64.tar.gz"
-      sha256 "30fe517accc77d64718422337499f71371fb65b5c6b12cb268fcce4177985b3e"
+      url "https://github.com/danvergara/dblab/releases/download/v0.11.0/dblab_0.11.0_linux_amd64.tar.gz"
+      sha256 "833450dc197ab25db3e9002239c601eca3cc7f13c743ff1fce99ce21d85b9149"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danvergara/dblab/releases/download/v0.10.1/dblab_0.10.1_linux_arm64.tar.gz"
-      sha256 "b792678b075f7078055aafe5f675e43810afedc939d9e080036c0fa9332eb521"
+      url "https://github.com/danvergara/dblab/releases/download/v0.11.0/dblab_0.11.0_linux_arm64.tar.gz"
+      sha256 "8976d8bcea3b453de34d687f9abdc53e717a69571b799e7af7973dcbd0e1d37b"
     end
   end
 
