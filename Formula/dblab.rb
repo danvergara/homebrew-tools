@@ -5,36 +5,47 @@
 class Dblab < Formula
   desc "Interactive client for PostgreSQL and MySQL"
   homepage "https://github.com/danvergara/dblab"
-  version "0.12.1"
+  version "0.13.0"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danvergara/dblab/releases/download/v0.12.1/dblab_0.12.1_darwin_amd64.tar.gz"
-      sha256 "f036503d86333a6c6aedb5c8e58b014b734fba584142d56421f0d28c11b23148"
+      url "https://github.com/danvergara/dblab/releases/download/v0.13.0/dblab_0.13.0_darwin_amd64.tar.gz"
+      sha256 "2fee1b2bb68af7194b06368347047c7fe764a0e60bd3e1ad69d099a1737c1820"
+
+      def install
+        bin.install "dblab"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danvergara/dblab/releases/download/v0.12.1/dblab_0.12.1_darwin_arm64.tar.gz"
-      sha256 "40025893833acd6752e2ee8f5850706b0b3015588a60d7f70b7d4f56907399a3"
+      url "https://github.com/danvergara/dblab/releases/download/v0.13.0/dblab_0.13.0_darwin_arm64.tar.gz"
+      sha256 "980985961325e9a2c7441e699c0ce617bd6dcd544228b6a69cb9fb70ca9ad34a"
+
+      def install
+        bin.install "dblab"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/danvergara/dblab/releases/download/v0.12.1/dblab_0.12.1_linux_amd64.tar.gz"
-      sha256 "7323f658e77cb6d81fcb75c4e7d5cbabe28e7d86ca279e3c6005a3c048f8a4bb"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danvergara/dblab/releases/download/v0.12.1/dblab_0.12.1_linux_arm64.tar.gz"
-      sha256 "d584bf1fcaeca461d5dbce9698cf556035f3ad59ef29d63a825c53f809927180"
+      url "https://github.com/danvergara/dblab/releases/download/v0.13.0/dblab_0.13.0_linux_arm64.tar.gz"
+      sha256 "28e8f2704bba047cf3dc27aabcf411758d613e7673ee5d72b2d3135354ec2b90"
+
+      def install
+        bin.install "dblab"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/danvergara/dblab/releases/download/v0.13.0/dblab_0.13.0_linux_amd64.tar.gz"
+      sha256 "90ddb3bc45d0a38efbdcd8b5a8fa66b620e11c9508a4bde93a7225f35f096154"
+
+      def install
+        bin.install "dblab"
+      end
     end
   end
 
   depends_on "git"
   depends_on "go"
-
-  def install
-    bin.install "dblab"
-  end
 end
