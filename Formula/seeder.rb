@@ -5,36 +5,47 @@
 class Seeder < Formula
   desc "Database seeds. CLI and Golang library"
   homepage "https://github.com/danvergaran/seeder"
-  version "0.3.0"
+  version "0.4.0"
   license "Apache-2.0"
-  bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/danvergara/seeder/releases/download/v0.3.0/seeder_0.3.0_darwin_amd64.tar.gz"
-      sha256 "e735c7365aa50750a4bb87dcfe917fa7c87e0076050cadbee0e1d9583e9bdd30"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/danvergara/seeder/releases/download/v0.3.0/seeder_0.3.0_darwin_arm64.tar.gz"
-      sha256 "85eb9bc1132abc1edf02ac09e6ec053393eb0b7c73c3e1322ffa0285c6df24ed"
+      url "https://github.com/danvergara/seeder/releases/download/v0.4.0/seeder_0.4.0_darwin_arm64.tar.gz"
+      sha256 "184bc925a23b59fea4794d23da31c9e878a8290e436bb813579e3f05f724ba8d"
+
+      def install
+        bin.install "seeder"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/danvergara/seeder/releases/download/v0.4.0/seeder_0.4.0_darwin_amd64.tar.gz"
+      sha256 "c0aa716a3e97b90a8b49f1d1a9e78114884e19b8ffb735e9a54d51b371a0a667"
+
+      def install
+        bin.install "seeder"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/danvergara/seeder/releases/download/v0.3.0/seeder_0.3.0_linux_amd64.tar.gz"
-      sha256 "7ddd46c3e7425fb2587b28045a4a0cae0aeac95e3fb15d9fd51cfb9b2a296f0f"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danvergara/seeder/releases/download/v0.3.0/seeder_0.3.0_linux_arm64.tar.gz"
-      sha256 "df5c146fa8cbb0d1290986b2fab4c4e6bd27882c7df524250f71dc3cfa014076"
+      url "https://github.com/danvergara/seeder/releases/download/v0.4.0/seeder_0.4.0_linux_arm64.tar.gz"
+      sha256 "40f80048fd679a4c122e1e9720d1443bfe73855055801efdbcddb69d2a255cb8"
+
+      def install
+        bin.install "seeder"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/danvergara/seeder/releases/download/v0.4.0/seeder_0.4.0_linux_amd64.tar.gz"
+      sha256 "e2a6a30f1879d73daca414bbb5930ec41ec498f536f6ef199fb40c4cdce81ec0"
+
+      def install
+        bin.install "seeder"
+      end
     end
   end
 
   depends_on "git"
   depends_on "go"
-
-  def install
-    bin.install "seeder"
-  end
 end
