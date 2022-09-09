@@ -11,7 +11,7 @@ class Dblab < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danvergara/dblab/releases/download/v0.16.0-rc1/dblab_0.16.0-rc1_darwin_amd64.tar.gz"
-      sha256 "f23d90c281fd873548103141b2f9f2de451f29e30433971cfde052ef2645e7b0"
+      sha256 "b4b15b4a2e1177822244891c7941d5b69baa319aa2abd605afe8ed9a3520585b"
 
       def install
         bin.install "dblab"
@@ -20,7 +20,7 @@ class Dblab < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/danvergara/dblab/releases/download/v0.16.0-rc1/dblab_0.16.0-rc1_darwin_arm64.tar.gz"
-      sha256 "327fc0a2369e2b7e9152e7417d245bb2bfa401c60fc4557de0dc350cf197cdd3"
+      sha256 "b98585b801834cf9fb5c500a36220074f97cb95a28ad14d1f8b6bc33cace5e1e"
 
       def install
         bin.install "dblab"
@@ -30,18 +30,18 @@ class Dblab < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danvergara/dblab/releases/download/v0.16.0-rc1/dblab_0.16.0-rc1_linux_arm64.tar.gz"
-      sha256 "3c48f0ef9a9a80c74553df240e75aa4b819f79021951ae0a0b4ba337e94433a4"
+    if Hardware::CPU.intel?
+      url "https://github.com/danvergara/dblab/releases/download/v0.16.0-rc1/dblab_0.16.0-rc1_linux_amd64.tar.gz"
+      sha256 "45fae15ee41a8b7f41086e5bafb4f05da53ac7ee09d9f01a72c999f8ada9ab1a"
 
       def install
         bin.install "dblab"
         bin.install "dblab-sqlite"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/danvergara/dblab/releases/download/v0.16.0-rc1/dblab_0.16.0-rc1_linux_amd64.tar.gz"
-      sha256 "e53bc51bb85c02bc252da29e85f017749b9e374bdb4c137cc81da6b178cb794b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/danvergara/dblab/releases/download/v0.16.0-rc1/dblab_0.16.0-rc1_linux_arm64.tar.gz"
+      sha256 "cb071fdc650667f999d725d1b6a49de07ed96edd85345a73b75b58bcf1d80e41"
 
       def install
         bin.install "dblab"
