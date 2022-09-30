@@ -5,47 +5,43 @@
 class Dblab < Formula
   desc "Interactive client for PostgreSQL and MySQL"
   homepage "https://github.com/danvergara/dblab"
-  version "0.16.0"
+  version "0.16.1-rc1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/danvergara/dblab/releases/download/v0.16.0/dblab_0.16.0_darwin_arm64.tar.gz"
-      sha256 "29c9d64eaa795515aa26034116e98d22f9c5e103552e12a32f05b469ed4b2955"
+    if Hardware::CPU.intel?
+      url "https://github.com/danvergara/dblab/releases/download/v0.16.1-rc1/dblab_0.16.1-rc1_darwin_amd64.tar.gz"
+      sha256 "efce33df495706b40a5f4551f4e67b9e60843aea38faefa3b66f435c4f4f4aed"
 
       def install
         bin.install "dblab"
-        bin.install "dblab-sqlite"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/danvergara/dblab/releases/download/v0.16.0/dblab_0.16.0_darwin_amd64.tar.gz"
-      sha256 "57a55e5ba536e861677aa2fa298b897182abfc94f0610780bee58bd61e6d2594"
+    if Hardware::CPU.arm?
+      url "https://github.com/danvergara/dblab/releases/download/v0.16.1-rc1/dblab_0.16.1-rc1_darwin_arm64.tar.gz"
+      sha256 "6e83b68d54e78fb7e35a2c6c9d3b9f25c118bb08cfafaa81ed5b9812efb379d7"
 
       def install
         bin.install "dblab"
-        bin.install "dblab-sqlite"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/danvergara/dblab/releases/download/v0.16.0/dblab_0.16.0_linux_amd64.tar.gz"
-      sha256 "85fb20b0ef0de0ed7235ddc868cd91d2d3553ccb052a3eb06cfe70f235a69b4d"
+      url "https://github.com/danvergara/dblab/releases/download/v0.16.1-rc1/dblab_0.16.1-rc1_linux_amd64.tar.gz"
+      sha256 "95167e7b2c2c6fee310e7505e743c91772f5d284add7434de500fd6396dbdcb3"
 
       def install
         bin.install "dblab"
-        bin.install "dblab-sqlite"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danvergara/dblab/releases/download/v0.16.0/dblab_0.16.0_linux_arm64.tar.gz"
-      sha256 "f76f783ea7fcd6617a72d2f9098ffcda1bc39ea3c4c88727540ca6fc4a913d19"
+      url "https://github.com/danvergara/dblab/releases/download/v0.16.1-rc1/dblab_0.16.1-rc1_linux_arm64.tar.gz"
+      sha256 "b7c74de5ab0a667bb2ba3be622fbbacc839b7edf7568bae11130582aeac7a8ef"
 
       def install
         bin.install "dblab"
-        bin.install "dblab-sqlite"
       end
     end
   end
