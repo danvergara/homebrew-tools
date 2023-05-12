@@ -9,17 +9,17 @@ class Dblab < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/danvergara/dblab/releases/download/v0.20.0-rc1/dblab_0.20.0-rc1_Darwin_amd64.tar.gz"
-      sha256 "026874ef92ab523aba9b4a1dac8377d075720dc55f1bac53d3083112d43774b7"
+    if Hardware::CPU.arm?
+      url "https://github.com/danvergara/dblab/releases/download/v0.20.0-rc1/dblab_0.20.0-rc1_darwin_arm64.tar.gz"
+      sha256 "26788fdbf86a0b4370e61907fc07bf47ced12a1efb732980723b0c1dd2c99a54"
 
       def install
         bin.install "dblab"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/danvergara/dblab/releases/download/v0.20.0-rc1/dblab_0.20.0-rc1_Darwin_arm64.tar.gz"
-      sha256 "5c0a244dae2fdf143e217a978194a16f5cac3b9c56715769ff7bf10a79649319"
+    if Hardware::CPU.intel?
+      url "https://github.com/danvergara/dblab/releases/download/v0.20.0-rc1/dblab_0.20.0-rc1_darwin_amd64.tar.gz"
+      sha256 "64999980d7559bd0a1d76f30f067b191c949168ca67b1f413d69ad80d34df939"
 
       def install
         bin.install "dblab"
@@ -29,16 +29,16 @@ class Dblab < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danvergara/dblab/releases/download/v0.20.0-rc1/dblab_0.20.0-rc1_Linux_arm64.tar.gz"
-      sha256 "1c82eb718d2b10cd142b49571869cc5dc5b1acf76027525b03e28c78df120b16"
+      url "https://github.com/danvergara/dblab/releases/download/v0.20.0-rc1/dblab_0.20.0-rc1_linux_arm64.tar.gz"
+      sha256 "3b2aa7ad61aa3c91b26c5e4780b2e0aca2af6b5b374ee2297532e9b3964e91ca"
 
       def install
         bin.install "dblab"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/danvergara/dblab/releases/download/v0.20.0-rc1/dblab_0.20.0-rc1_Linux_amd64.tar.gz"
-      sha256 "1bfed877036010ad138cb125911ef346ebed089b4d93c030eb2bb39623510191"
+      url "https://github.com/danvergara/dblab/releases/download/v0.20.0-rc1/dblab_0.20.0-rc1_linux_amd64.tar.gz"
+      sha256 "211f31964a16ee31f37804c27602f373bb6bb81aa920b2e32fa9ca4e8b4f6c6c"
 
       def install
         bin.install "dblab"
