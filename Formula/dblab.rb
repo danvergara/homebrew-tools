@@ -5,21 +5,21 @@
 class Dblab < Formula
   desc "Interactive client for PostgreSQL and MySQL"
   homepage "https://github.com/danvergara/dblab"
-  version "0.29.0"
+  version "0.30.0"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/danvergara/dblab/releases/download/v0.29.0/dblab_0.29.0_darwin_amd64.tar.gz"
-      sha256 "7b6258e0946e64fd3fd6a2b0695acedc637aa870b7c3a7b8d784622b42933684"
+    if Hardware::CPU.intel?
+      url "https://github.com/danvergara/dblab/releases/download/v0.30.0/dblab_0.30.0_darwin_amd64.tar.gz"
+      sha256 "fb7e0e66c5d13d5134cd3737d69f1fd392572b9cecb8f0f04f7e0022daa35b69"
 
       def install
         bin.install "dblab"
       end
     end
-    on_arm do
-      url "https://github.com/danvergara/dblab/releases/download/v0.29.0/dblab_0.29.0_darwin_arm64.tar.gz"
-      sha256 "5656fb99f7f089bd80819e776322b60b20a39a96fee62959404cad4c7e01285a"
+    if Hardware::CPU.arm?
+      url "https://github.com/danvergara/dblab/releases/download/v0.30.0/dblab_0.30.0_darwin_arm64.tar.gz"
+      sha256 "8371745431c845085085df7fc722d474ac3320401f2e727cea654ff1c30ab7fe"
 
       def install
         bin.install "dblab"
@@ -28,20 +28,20 @@ class Dblab < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/danvergara/dblab/releases/download/v0.29.0/dblab_0.29.0_linux_amd64.tar.gz"
-        sha256 "60809e5acb4a861155c619d2d5df6c441a6eb336d4f3cd0737026198abb50ec1"
+        url "https://github.com/danvergara/dblab/releases/download/v0.30.0/dblab_0.30.0_linux_amd64.tar.gz"
+        sha256 "b7b9484a0b124b55ed25d7fe8ffa2850ea7fa38373c221b5325b3fdf3db2e8d6"
 
         def install
           bin.install "dblab"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/danvergara/dblab/releases/download/v0.29.0/dblab_0.29.0_linux_arm64.tar.gz"
-        sha256 "50a366c9d6fafca6b3c9d73d025c1ac96b1e0b477decbe018aae7bd123fe832d"
+        url "https://github.com/danvergara/dblab/releases/download/v0.30.0/dblab_0.30.0_linux_arm64.tar.gz"
+        sha256 "88530a60169e4c5f394587cb86c276bb4e786eae74e96be2aeeec2aaaa40b423"
 
         def install
           bin.install "dblab"
