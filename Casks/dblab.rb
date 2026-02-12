@@ -3,7 +3,7 @@ cask "dblab" do
   name "dblab"
   desc "Interactive client for PostgreSQL, MySQL, SQLite, Oracle, and SQL Server"
   homepage "https://github.com/danvergara/dblab"
-  version "0.34.2"
+  version "0.34.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "dblab" do
   on_macos do
     on_intel do
       url "https://github.com/danvergara/dblab/releases/download/v#{version}/dblab_#{version}_darwin_amd64.tar.gz"
-      sha256 "3354bede82e1818a590ea4ffb937a6e0301b6e9711e2c42a2374e117159531ad"
+      sha256 "2e50cc16997ec0d5bb8a806bb07d489bef4e19ab24d6cdb1f8af5994f6e57fd9"
     end
     on_arm do
       url "https://github.com/danvergara/dblab/releases/download/v#{version}/dblab_#{version}_darwin_arm64.tar.gz"
-      sha256 "7f8432cfe5b62d3e131234a0ba2b889b124e6a8f0b7b2fbbf54ddb1983300cac"
+      sha256 "ac855be5b621d6d9804bcbae62f96b68787dcc6f65a885036a69ff51ac011c6a"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/danvergara/dblab/releases/download/v#{version}/dblab_#{version}_linux_amd64.tar.gz"
-      sha256 "cc5bb0ec1e5777433480e151f2925a1af9d5f61d34d1b111ecba019bcee7f346"
+      sha256 "4f60218ffc2f5b5f6a68e85aba5c6aca471b60ab33f1e83908fc74e74ecd836b"
     end
     on_arm do
       url "https://github.com/danvergara/dblab/releases/download/v#{version}/dblab_#{version}_linux_arm64.tar.gz"
-      sha256 "eb569f94b799ad5098524ab9aadadc6cbb20814cf1b355e3d39d762e38aaf76d"
+      sha256 "241c36d00921f646723ef19c4b55c14f71684f2a2217aa357976d3717abeae0b"
     end
   end
 
