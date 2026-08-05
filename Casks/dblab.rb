@@ -4,22 +4,22 @@ cask "dblab" do
 
   on_macos do
     on_intel do
-      sha256 "fd76b6b52ac53e3c41ab4fe8c27cf3c845acc7bd927c21badf8003e5f81b6793"
+      sha256 "3cfb7f5ee6c9b9bbcda8f689691b4d05569a2d3961f8fc066b84b3f72dffdfa1"
       url "https://github.com/danvergara/dblab/releases/download/v#{version}/dblab_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "55e679babb74521f62285277e9353a3b7d0b8caf11a17a9c760b946dd7745efe"
+      sha256 "2e8d186755618508aef1186cfb76e0bb303a53b9a86e23144fc698f8794a2afc"
       url "https://github.com/danvergara/dblab/releases/download/v#{version}/dblab_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "2057db51281e268ee6f0910c7a6552ed75cdd832dbb8282741a053db4fcedfc8"
+      sha256 "95391a05ba7d6e64a60192906589a7164a4ef822d4a19e0f0017c56483da09d4"
       url "https://github.com/danvergara/dblab/releases/download/v#{version}/dblab_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "53a9d6aad9bfd9eb96ac7dc16b4916a7284cec84c27860ba93187f1d2006f75b"
+      sha256 "cdea28f8d02bf87ba2ce0ab6ab658a99ab47e57efdf7b2c72d832b3b70e180a6"
       url "https://github.com/danvergara/dblab/releases/download/v#{version}/dblab_#{version}_linux_arm64.tar.gz"
     end
   end
